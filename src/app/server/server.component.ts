@@ -8,6 +8,13 @@ import { Component, OnInit } from '@angular/core';
 export class ServerComponent implements OnInit {
   serverId = 10;
   serverStatus = 'offline';
+  allowNewServer = false;
+
+  constructor() {
+    setTimeout(() => {
+      this.allowNewServer = true;
+    }, 2000);
+  }
 
   ngOnInit(): void {
     throw new Error('Method not implemented.');
@@ -16,4 +23,6 @@ export class ServerComponent implements OnInit {
   getStatus() {
     return this.serverStatus;
   }
+
+
 }
