@@ -13,4 +13,8 @@ export class UserComponent implements OnInit {
   ngOnInit() {
   }
 
+  onReset() {
+    this.username = '';
+  }
+
 }
