@@ -19,7 +19,7 @@ export class ServerComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    throw new Error('Method not implemented.');
+    // throw new Error('Method not implemented.');
   }
 
   getStatus() {
@@ -27,7 +27,7 @@ export class ServerComponent implements OnInit {
   }
 
   onClickServer() {
-    this.serverCreationStatus = 'Server was created';
+    this.serverCreationStatus = 'Server was created' + '. Name is ' + this.serverName;
   }
 
   onUpdateServerName(event: Event) {
