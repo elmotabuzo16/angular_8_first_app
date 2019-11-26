@@ -7,14 +7,17 @@ import { Component, OnInit } from '@angular/core';
 })
 export class UserComponent implements OnInit {
   username = '';
+  usernameAdd = false;
+  usernameStatus = '';
   
   constructor() { }
 
   ngOnInit() {
   }
 
-  onReset() {
-    this.username = '';
+  onAddUsername() {
+    this.usernameAdd = true;
+    this.usernameStatus = 'Added username: ' + this.username;
   }
 
 }

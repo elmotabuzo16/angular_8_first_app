@@ -1,4 +1,4 @@
 <input type="text" class="form-control" [(ngModel)]='username' placeholder="Enter username">
-<p>{{ username }}</p>
 <br/>
-<button type="button" class="btn btn-primary" [disabled]="username === ''" (click)='onReset()'>Reset Username</button>
+<button type="button" class="btn btn-primary" [disabled]="username === ''" (click)='onAddUsername()'>Add Username</button>
+<p *ngIf='usernameAdd'>{{ usernameStatus }}</p>
