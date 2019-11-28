@@ -9,15 +9,23 @@ export class UserComponent implements OnInit {
   username = '';
   usernameAdd = false;
   usernameStatus = '';
-  
-  constructor() { }
+
+  constructor() { 
+    this.usernameStatus = Math.random() > 0.5 ? 'online' : 'offline';
+  }
 
   ngOnInit() {
   }
 
   onAddUsername() {
     this.usernameAdd = true;
-    this.usernameStatus = 'Added username: ' + this.username;
+
+    return this.usernameStatus;
+  }
+
+  getColor()
+  {
+    return this.usernameStatus === 'online' ? 'green' : 'red';
   }
 
 }
