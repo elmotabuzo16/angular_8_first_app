@@ -7,7 +7,8 @@
 
 <p *ngIf="usernameAdd; else noServer" 
     [ngStyle]="{backgroundColor: getColor()}"
-    [ngClass]="{online: usernameStatus === 'online'}">
+    [ngClass]="{'online': usernameStatus === 'online'}"
+    >
         Added username: {{username}} - {{ onAddUsername() }}
 </p>
 <ng-template #noServer>

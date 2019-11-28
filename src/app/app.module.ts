@@ -6,12 +6,14 @@ import { HttpModule } from '@angular/http'
 import { AppComponent } from './app.component';
 import { ServerComponent } from './server/server.component';
 import { UserComponent } from './user/user.component';
+import { ExerciseNgForComponent } from './exerciseNgFor/exerciseNgFor.component';
 
 @NgModule({
    declarations: [
       AppComponent,
       ServerComponent,
-      UserComponent
+      UserComponent,
+      ExerciseNgForComponent
    ],
    imports: [
       BrowserModule,

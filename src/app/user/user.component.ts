@@ -10,6 +10,7 @@ export class UserComponent implements OnInit {
   username = '';
   usernameAdd = false;
   usernameStatus = '';
+  usernames = ['EVTABUZ', 'ETABUZO'];
 
   constructor() { 
     this.usernameStatus = Math.random() > 0.5 ? 'online' : 'offline';
@@ -20,12 +21,11 @@ export class UserComponent implements OnInit {
 
   onAddUsername() {
     this.usernameAdd = true;
-
+    this.usernames.push(this.username);
     return this.usernameStatus;
   }
 
-  getColor()
-  {
+  getColor() {
     return this.usernameStatus === 'online' ? 'green' : 'red';
   }
 
